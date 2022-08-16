@@ -3,6 +3,11 @@ import { ApiInterfaceRx } from '@polkadot/api/types';
 import { AccountId, Balance } from '@orml/types/interfaces';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { AccountInfo } from '@polkadot/types/interfaces';
+import { AccountId, Balance } from '@orml/types/interfaces';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
+
 import { memo } from '../util';
 
 export function balance(
@@ -18,6 +23,9 @@ export function balance(
         return api.query.balances.account(address).pipe(
           map(result => {
             return result.free;
+        return api.query.system.account<AccountInfo>(address).pipe(
+          map(result => {
+            return result.data.free;
           })
         );
       } else {

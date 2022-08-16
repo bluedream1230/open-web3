@@ -7,4 +7,11 @@ module.exports = {
     '@orml/util(.*)$': '<rootDir>/packages/util/src/$1',
     '@orml/api-derive(.*)$': '<rootDir>/packages/api-derive/src/$1'
   }
+  },
+  modulePathIgnorePatterns: [
+    '<rootDir>/build',
+    '<rootDir>/packages/api/build',
+    '<rootDir>/packages/types/build',
+    '<rootDir>/packages/scanner/build'
+  ]
 };
