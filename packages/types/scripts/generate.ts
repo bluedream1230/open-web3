@@ -1,3 +1,4 @@
+import { generateInterfaceRegistry } from '@polkadot/typegen/generate/interfaceRegistry';
 import { generateInterfaceTypes } from '@polkadot/typegen/generate/interfaceRegistry';
 import { generateTsDef } from '@polkadot/typegen/generate/tsDef';
 import * as defaultDefinations from '@polkadot/types/interfaces/definitions';

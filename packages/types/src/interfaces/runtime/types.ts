@@ -2,6 +2,9 @@
 /* eslint-disable @typescript-eslint/no-empty-interface */
 
 import { ITuple } from '@polkadot/types/types';
+import { Compact, Enum, Struct, U8aFixed, Vec } from '@polkadot/types/codec';
+import { Bytes, Fixed64, GenericAccountId, GenericAccountIndex, GenericAddress, GenericBlock, GenericCall, GenericConsensusEngineId, GenericDigest, GenericExtrinsic, GenericExtrinsicEra, GenericExtrinsicPayload, GenericExtrinsicPayloadUnknown, GenericExtrinsicPayloadV1, GenericExtrinsicPayloadV2, GenericExtrinsicPayloadV3, GenericExtrinsicPayloadV4, GenericExtrinsicSignatureV1, GenericExtrinsicSignatureV2, GenericExtrinsicSignatureV3, GenericExtrinsicSignatureV4, GenericExtrinsicUnknown, GenericExtrinsicV1, GenericExtrinsicV2, GenericExtrinsicV3, GenericExtrinsicV4, GenericImmortalEra, GenericMortalEra, GenericOrigin, GenericSignerPayload, Null, StorageData, StorageKey, bool, u128, u32, u64, u8 } from '@polkadot/types/primitive';
+import { AuthorityId } from '@polkadot/types/interfaces/consensus';
 import { Compact, Enum, Int, Struct, U8aFixed, Vec } from '@polkadot/types/codec';
 import { GenericAccountId, GenericAccountIndex, GenericAddress, GenericBlock, GenericCall, GenericConsensusEngineId, GenericDigest, GenericOrigin } from '@polkadot/types/generic';
 import { Bytes, Null, StorageKey, bool, u128, u32, u64, u8 } from '@polkadot/types/primitive';
@@ -91,8 +94,52 @@ export interface DispatchInfoTo190 extends Struct {
   readonly class: DispatchClass;
 }
 
+/** @name EcdsaSignature */
+export interface EcdsaSignature extends U8aFixed {}
+
+/** @name Ed25519Signature */
+export interface Ed25519Signature extends Signature {}
+
+/** @name Extrinsic */
+export interface Extrinsic extends GenericExtrinsic {}
+
+/** @name ExtrinsicEra */
+export interface ExtrinsicEra extends GenericExtrinsicEra {}
+
+/** @name ExtrinsicPayload */
+export interface ExtrinsicPayload extends GenericExtrinsicPayload {}
+
+/** @name ExtrinsicPayloadUnknown */
+export interface ExtrinsicPayloadUnknown extends GenericExtrinsicPayloadUnknown {}
+
+/** @name ExtrinsicPayloadV1 */
+export interface ExtrinsicPayloadV1 extends GenericExtrinsicPayloadV1 {}
+
+/** @name ExtrinsicPayloadV2 */
+export interface ExtrinsicPayloadV2 extends GenericExtrinsicPayloadV2 {}
+
+/** @name ExtrinsicPayloadV3 */
+export interface ExtrinsicPayloadV3 extends GenericExtrinsicPayloadV3 {}
+
+/** @name ExtrinsicPayloadV4 */
+export interface ExtrinsicPayloadV4 extends GenericExtrinsicPayloadV4 {}
+
+/** @name ExtrinsicSignatureV1 */
+export interface ExtrinsicSignatureV1 extends GenericExtrinsicSignatureV1 {}
+
+/** @name ExtrinsicSignatureV2 */
+export interface ExtrinsicSignatureV2 extends GenericExtrinsicSignatureV2 {}
 /** @name Fixed64 */
 export interface Fixed64 extends Int {}
+
+/** @name H160 */
+export interface H160 extends U8aFixed {}
+
+/** @name H256 */
+export interface H256 extends U8aFixed {}
+
+/** @name H512 */
+export interface H512 extends U8aFixed {}
 
 /** @name H160 */
 export interface H160 extends U8aFixed {}
